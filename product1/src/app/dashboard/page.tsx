@@ -2,11 +2,13 @@
 import Image from 'next/image';
 import { FaInstagram } from "react-icons/fa";
 import React, { useState } from 'react';
-import Performance from '@/components/profile/performance';
+import Navbar from '@/components/profile/navbar';
 import { RiCake2Line } from "react-icons/ri";
 import { IoLanguage } from "react-icons/io5";
 import { RiPlayListAddLine } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
+import Performance from '@/components/profile/Performance';
+import ProfilePostCard from '@/components/profile/TopContent';
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,6 +16,8 @@ const Dashboard = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const topPosts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div className="flex-1 p-4 sm:p-6 lg:p-0">
       <div className="flex flex-col items-center lg:items-start justify-between">
@@ -103,12 +107,20 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
-        {/* Performance Component */}
-        <Performance />
+        <Navbar />
+        <div className='overflow-x-auto mt-5'>
+          <div className='flex space-x-4 px-4'>
+            {topPosts.map((post) => (
+              <div className='flex-shrink-0 w-1/3'>
+                <ProfilePostCard />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default Dashboard;

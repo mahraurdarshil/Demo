@@ -6,6 +6,9 @@ import { MdOutlineCampaign } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
 import { BsCodeSlash } from "react-icons/bs";
 import { MdPhoneInTalk } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
+import { HiOutlineBars3 } from "react-icons/hi2";
+
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,25 +18,25 @@ const Sidebar = () => {
     };
 
     return (
-        <div>
+        <div className='fixed top-0 left-0 h-screen text-white z-50'>
             {/* Sidebar Toggle Button */}
             <button
                 onClick={toggleSidebar}
                 className="lg:hidden text-2xl m-4"
             >
-                ☰
+               <HiOutlineBars3 color='black'/>
             </button>
 
             {/* Sidebar */}
             <div
-                className={`bg-gray-50 lg:bg-white fixed lg:static top-0 left-0 h-full w-72 p-6 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`bg-gray-50 h-screen lg:bg-white fixed lg:static top-0 left-0 w-72 p-6 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-200 lg:translate-x-0 z-50 border-r-2 flex flex-col`}
             >
                 <button
                     onClick={toggleSidebar}
                     className="lg:hidden absolute top-4 right-4 text-2xl"
                 >
-                    ✕
+                    <RxCross2 color='black'/>
                 </button>
                 <div className="text-3xl font-semibold text-indigo-500 mb-12">
                     Falcon Insights
