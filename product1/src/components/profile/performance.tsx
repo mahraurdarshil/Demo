@@ -2,7 +2,7 @@ import React from 'react'
 
 const Performance = () => {
     return (
-        <div className="flex flex-wrap justify-center lg:justify-evenly p-4 lg:p-8 border-t-2 border-b-2">
+        <div className="flex flex-wrap justify-center lg:justify-evenly p-4 lg:p-6 border-t-2 border-b-2">
             <span className="hidden lg:inline-block"></span>
             <span className="hidden lg:inline-block"></span>
 

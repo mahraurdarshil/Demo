@@ -45,15 +45,15 @@ const Sidebar = () => {
                     <div className="space-y-6">
                         <div className="flex items-center text-gray-700 cursor-pointer">
                             <IoSearch size={30} />
-                            <span className="ml-4 font-semibold text-lg">Talk to us</span>
+                            <span className="ml-4 text-lg">Talk to us</span>
                         </div>
                         <div className="flex items-center text-gray-700 cursor-pointer">
                             <GoPeople size={30} />
-                            <span className="ml-4 font-semibold text-lg">For developers</span>
+                            <span className="ml-4 text-lg">For developers</span>
                         </div>
                         <div className="flex items-center text-gray-700 cursor-pointer">
                             <MdOutlineCampaign size={30} />
-                            <span className="ml-4 font-semibold text-lg">Your account</span>
+                            <span className="ml-4 text-lg">Your account</span>
                         </div>
                     </div>
 
@@ -61,15 +61,15 @@ const Sidebar = () => {
                     <div className="space-y-6">
                         <div className="flex items-center text-gray-700 cursor-pointer">
                             <MdPhoneInTalk size={30} />
-                            <span className="ml-4 font-semibold text-lg">Creator search</span>
+                            <span className="ml-4 text-lg">Creator search</span>
                         </div>
                         <div className="flex items-center text-gray-700 cursor-pointer">
                             <BsCodeSlash size={30} />
-                            <span className="ml-4 font-semibold text-lg">Creator onboarding</span>
+                            <span className="ml-4 text-lg">Creator onboarding</span>
                         </div>
                         <div className="flex items-center text-gray-700 cursor-pointer">
                             <VscAccount size={30} />
-                            <span className="ml-4 font-semibold text-lg">Campaigns</span>
+                            <span className="ml-4 text-lg">Campaigns</span>
                         </div>
                     </div>
                 </div>
