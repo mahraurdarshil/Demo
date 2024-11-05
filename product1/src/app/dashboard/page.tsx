@@ -109,6 +109,7 @@ const Dashboard = () => {
         </div>
         <Navbar />
         <div className='overflow-x-auto mt-5'>
+          <div className='font-bold text-xl mb-2 ml-5'>Top post</div>
           <div className='flex space-x-4 px-4'>
             {topPosts.map((post) => (
               <div className='flex-shrink-0 w-1/3'>
@@ -116,6 +117,9 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className='h-32 w-32'>
         </div>
       </div>
     </div>
