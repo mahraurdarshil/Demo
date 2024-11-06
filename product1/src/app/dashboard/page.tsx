@@ -1,14 +1,14 @@
-"use client"
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
-import React, { useState } from 'react';
-import Navbar from '@/components/profile/navbar';
+import React, { useState } from "react";
+import Navbar from "@/components/profile/navbar";
 import { RiCake2Line } from "react-icons/ri";
 import { IoLanguage } from "react-icons/io5";
 import { RiPlayListAddLine } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
-import Performance from '@/components/profile/Performance';
-import ProfilePostCard from '@/components/profile/TopContent';
+import ProfilePostCard from "@/components/profile/TopContent";
+import { userData } from "@/data/data";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,7 +17,6 @@ const Dashboard = () => {
     setIsOpen(!isOpen);
   };
 
-  const topPosts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div className="flex-1 p-4 sm:p-6 lg:p-0">
       <div className="flex flex-col items-center lg:items-start justify-between">
@@ -34,19 +33,21 @@ const Dashboard = () => {
             <div className="flex w-full lg:w-2/3 flex-col lg:flex-row items-center lg:items-start">
               <Image
                 className="rounded-full"
-                src="/profile/p1.jpg"
+                src={userData.profileImage}
                 alt="Profile"
                 width={200}
                 height={200}
               />
               <div className="ml-0 lg:ml-4 mt-4 lg:mt-0 space-y-4 text-center lg:text-left">
-                <div className="text-lg sm:text-3xl font-bold">MAKE OUT HILL</div>
+                <div className="text-lg sm:text-3xl font-bold">
+                  {userData.name}
+                </div>
                 <div className="text-gray-900 flex items-center justify-center lg:justify-start space-x-2">
-                  <span>@xxxtentacion</span>
+                  <span>{userData.username}</span>
                   <FaInstagram color="red" />
                 </div>
                 <div className="text-gray-500 w-full sm:w-5/6">
-                  Bio: "long live jahseh" account managed by his management team
+                  {userData.bio}
                 </div>
               </div>
             </div>
@@ -59,7 +60,10 @@ const Dashboard = () => {
               </div>
 
               <div className="flex items-center space-x-2 relative">
-                <div onClick={toggleDropdown} className="flex items-center cursor-pointer">
+                <div
+                  onClick={toggleDropdown}
+                  className="flex items-center cursor-pointer"
+                >
                   <IoIosShareAlt size={30} />
                   <span className="text-lg"> Share</span>
                 </div>
@@ -68,8 +72,12 @@ const Dashboard = () => {
                 {isOpen && (
                   <div className="absolute top-full mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg animate-fadeIn z-10">
                     <ul className="py-2 text-gray-700">
-                      <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer transition-colors">Share link</li>
-                      <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer transition-colors">Download PDF</li>
+                      <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer transition-colors">
+                        Share link
+                      </li>
+                      <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer transition-colors">
+                        Download PDF
+                      </li>
                     </ul>
                   </div>
                 )}
@@ -81,50 +89,58 @@ const Dashboard = () => {
           <div className="flex flex-wrap mt-6 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-12">
             <div className="flex items-center space-x-2 text-gray-600 w-full sm:w-auto">
               <div>
-                <RiCake2Line size={50} className="bg-slate-50 rounded-full p-2" />
+                <RiCake2Line
+                  size={50}
+                  className="bg-slate-50 rounded-full p-2"
+                />
               </div>
               <div className="flex flex-col items-center sm:items-start">
                 <span>Creator's age</span>
-                <span className="text-lg font-semibold">Between 25-34 years</span>
+                <span className="text-lg font-semibold">{userData.age}</span>
               </div>
             </div>
             <div className="flex items-center space-x-2 text-gray-600 w-full sm:w-auto">
               <div>
-                <IoLanguage size={50} className="bg-slate-50 rounded-full p-2" />
+                <IoLanguage
+                  size={50}
+                  className="bg-slate-50 rounded-full p-2"
+                />
               </div>
               <div className="flex flex-col items-center sm:items-start">
                 <span>Language spoken</span>
-                <span className="text-lg font-semibold">English</span>
+                <span className="text-lg font-semibold">
+                  {userData.language}
+                </span>
               </div>
             </div>
             <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
               <span>Gender</span>
-              <span className="text-lg font-semibold">Male</span>
+              <span className="text-lg font-semibold">{userData.gender}</span>
             </div>
             <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
               <span>Account type</span>
-              <span className="text-lg font-semibold">Business</span>
+              <span className="text-lg font-semibold">
+                {userData.accountType}
+              </span>
             </div>
           </div>
         </div>
         <Navbar />
-        <div className='overflow-x-auto mt-5'>
-          <div className='font-bold text-xl mb-2 ml-5'>Top post</div>
-          <div className='flex space-x-4 px-4'>
-            {topPosts.map((post) => (
-              <div className='flex-shrink-0 w-1/3'>
-                <ProfilePostCard />
+        <div className="overflow-x-auto mt-5">
+          <div className="font-bold text-xl mb-2 ml-5">Top post</div>
+          <div className="flex space-x-4 px-4">
+            {userData.topPosts.map((post, index) => (
+              <div className="flex-shrink-0 w-1/3" key={index}>
+                <ProfilePostCard post={post}/>
               </div>
             ))}
           </div>
         </div>
 
-        <div className='h-32 w-32'>
-        </div>
+        <div className="h-32 w-32"></div>
       </div>
     </div>
   );
 };
-
 
 export default Dashboard;
