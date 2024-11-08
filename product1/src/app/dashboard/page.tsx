@@ -176,7 +176,7 @@ const Dashboard = () => {
           <hr className="w-full border-1" />
           <Audience />
           <hr className="w-full border-1" />
-          <AudienceDemographics />
+          <AudienceDemographics data={user} />
           <hr className="w-full border-1" />
           <AudienceInterests />
           <hr className="w-full border-1" />

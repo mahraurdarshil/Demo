@@ -58,6 +58,76 @@
           "value": 10
         }
       ]
+    },
+    "audienceDemographics": {
+      "id": 1,
+      "heading": "Audience Demographics",
+      "subHeading": "Classification of followers based on their demographics.",
+      "type": [
+        {
+          "id": 1,
+          "type": "age",
+          "value": [
+            {
+              "id": 1,
+              "type": "18-22",
+              "value": 12
+            },
+            {
+              "id": 2,
+              "type": "23-27",
+              "value": 30
+            },
+            {
+              "id": 3,
+              "type": "28-32",
+              "value": 20
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "type": "language",
+          "value": [
+            {
+              "id": 1,
+              "type": "English",
+              "value": 20
+            },
+            {
+              "id": 2,
+              "type": "Spanish",
+              "value": 10
+            },
+            {
+              "id": 3,
+              "type": "French",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "type": "ethnicity",
+          "value": [
+            {
+              "id": 1,
+              "type": "White",
+              "value": 15
+            },
+            {
+              "id": 2,
+              "type": "Black",
+              "value": 30
+            },
+            {
+              "id": 3,
+              "type": "Asian",
+              "value": 20
+            }
+          ]
+        }
+      ]
     }
   }
 ]

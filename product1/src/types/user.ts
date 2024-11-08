@@ -25,11 +25,29 @@ export type User = {
     heading: string;
     subHeading: string;
     totalFollowers: number;
-    types: types[];
+    types: followersTypes[];
+  };
+  audienceDemographics: {
+    id: number;
+    heading: string;
+    subHeading: string;
+    type: audienceDemographicsTypes[];
   };
 };
 
-export type types = {
+export type audienceDemographicsTypes = {
+  id: number;
+  type: string;
+  value: audienceDemographicsTypesValue[];
+};
+
+export type audienceDemographicsTypesValue = {
+  id?: number;
+  type: string;
+  value: number;
+};
+
+export type followersTypes = {
   id: number;
   type: string;
   value: number;

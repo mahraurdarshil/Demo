@@ -17,14 +17,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-]
+import { User } from "@/types/user"
+import { useEffect, useState } from "react"
 
 const chartConfig = {
   desktop: {
@@ -33,12 +27,60 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function BarChartV() {
+export function BarChartV({ data }: {
+  data: User
+}) {
+  const [type, setType] = useState<string>('age')
+  const [chartData, setChartData] = useState<Array<{
+    month: string
+    desktop: number
+  }>>([
+    { month: "", desktop: 0 },
+    { month: "", desktop: 0 },
+    { month: "", desktop: 0 },
+  ])
+
+  useEffect(() => {
+    if (type === 'age') {
+      const valueArray = data.audienceDemographics.type[0].value
+      setChartData(valueArray.map((item) => {
+        return {
+          month: item.type,
+          desktop: item.value
+        }
+      }))
+    } else if (type === 'language') {
+      const valueArray = data.audienceDemographics.type[1].value
+      setChartData(valueArray.map((item) => {
+        return {
+          month: item.type,
+          desktop: item.value
+        }
+      }))
+    } else if (type === 'ethnicity') {
+      const valueArray = data.audienceDemographics.type[2].value
+      setChartData(valueArray.map((item) => {
+        return {
+          month: item.type,
+          desktop: item.value
+        }
+      }))
+    }
+  }, [type])
+
+  console.log("C data ", chartData)
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Audience demographics</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{data.audienceDemographics.heading}</CardTitle>
+        <CardDescription>{data.audienceDemographics.subHeading}</CardDescription>
+        <div className="mt-5 mb-5">
+          <div className="flex space-x-6 border rounded-full w-fit p-2 pr-4 pl-4 bg-slate-50">
+            <button onClick={() => setType('age')} className={`mr-2 ${type === 'age' ? 'text-primary bg-slate-200 p-2 rounded-full' : 'text-gray-400'}`}>Age</button>
+            <button onClick={() => setType('language')} className={`mr-2 ${type === 'language' ? 'text-primary bg-slate-200 p-2 rounded-full' : 'text-gray-400'}`}>Language</button>
+            <button onClick={() => setType('ethnicity')} className={`mr-2 ${type === 'ethnicity' ? 'text-primary bg-slate-200 p-2 rounded-full' : 'text-gray-400'}`}>Ethnicity</button>
+          </div>
+        </div>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -58,7 +100,7 @@ export function BarChartV() {
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip
-              cursor={false}
+              cursor={true}
               content={<ChartTooltipContent hideLabel />}
             />
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8}>
@@ -72,14 +114,6 @@ export function BarChartV() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
   )
 }
