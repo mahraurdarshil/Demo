@@ -82,6 +82,26 @@
               "id": 3,
               "type": "28-32",
               "value": 20
+            },
+            {
+              "id": 4,
+              "type": "33-37",
+              "value": 10
+            },
+            {
+              "id": 6,
+              "type": "43-47",
+              "value": 5
+            },
+            {
+              "id": 7,
+              "type": "48-52",
+              "value": 3
+            },
+            {
+              "id": 8,
+              "type": "53-57",
+              "value": 2
             }
           ]
         },
@@ -103,6 +123,41 @@
               "id": 3,
               "type": "French",
               "value": 10
+            },
+            {
+              "id": 4,
+              "type": "German",
+              "value": 5
+            },
+            {
+              "id": 5,
+              "type": "Italian",
+              "value": 5
+            },
+            {
+              "id": 6,
+              "type": "Russian",
+              "value": 5
+            },
+            {
+              "id": 7,
+              "type": "Chinese",
+              "value": 5
+            },
+            {
+              "id": 8,
+              "type": "Japanese",
+              "value": 5
+            },
+            {
+              "id": 9,
+              "type": "Korean",
+              "value": 5
+            },
+            {
+              "id": 10,
+              "type": "Arabic",
+              "value": 5
             }
           ]
         },
@@ -124,6 +179,16 @@
               "id": 3,
               "type": "Asian",
               "value": 20
+            },
+            {
+              "id": 4,
+              "type": "Hispanic",
+              "value": 10
+            },
+            {
+              "id": 5,
+              "type": "Middle Eastern",
+              "value": 5
             }
           ]
         }
