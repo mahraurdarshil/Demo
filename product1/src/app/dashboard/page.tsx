@@ -138,7 +138,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <CommentAnalysis />
+        <CommentAnalysis data={userData}/>
 
         <div className="h-32 w-32"></div>
       </div>
