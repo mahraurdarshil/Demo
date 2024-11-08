@@ -170,9 +170,13 @@ const Dashboard = () => {
           <Frequently />
           <hr className="w-full border-1" />
           <Audience />
+          <hr className="w-full border-1" />
           <AudienceDemographics />
+          <hr className="w-full border-1" />
           <AudienceInterests />
+          <hr className="w-full border-1" />
           <FollowerTypes />
+          <hr className="w-full border-1" />
           <SimilarCreator />
           <hr className="w-full border-1" />
         </div>
