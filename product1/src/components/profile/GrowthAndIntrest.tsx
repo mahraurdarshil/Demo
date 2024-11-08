@@ -13,9 +13,11 @@ const GrowthAndIntrest = ({ data }: {
                     <p>{data.growthAndInterest.subHeading}</p>
                 </div>
             </div>
-            <div className='flex justify-around mt-10'>
+            <div className='flex flex-row mt-10'>
                 {data.growthAndInterest.type.map((item, index) => (
-                    <LineCharts key={index} data={item} />
+                    <div className='w-1/2'>
+                        <LineCharts key={index} data={item} />
+                    </div>
                 ))}
             </div>
         </div>
