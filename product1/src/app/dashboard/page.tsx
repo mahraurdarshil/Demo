@@ -162,19 +162,19 @@ const Dashboard = () => {
         </div>
         <div className="flex flex-col space-y-4">
 
-          <hr className="w-full border-1 mt-4" />
+          <hr className="w-full border-1" />
           <CommentAnalysis data={user} />
-          <hr className="w-full border-1 mt-4" />
+          <hr className="w-full border-1 " />
           <GrowthAndIntrest />
-          <hr className="w-full border-1 mt-4" />
+          <hr className="w-full border-1" />
           <Frequently />
-          <hr className="w-full border-1 mt-4" />
+          <hr className="w-full border-1" />
           <Audience />
           <AudienceDemographics />
           <AudienceInterests />
           <FollowerTypes />
           <SimilarCreator />
-          <hr className="w-full border-1 mt-4" />
+          <hr className="w-full border-1" />
         </div>
         <div className="h-32 w-32"></div>
       </div>

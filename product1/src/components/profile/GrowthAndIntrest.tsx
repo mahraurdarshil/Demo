@@ -3,11 +3,13 @@ import { LineCharts } from '../shadcn/LineChart'
 
 const GrowthAndIntrest = () => {
     return (
-        <div>
+        <div className='p-10'>
             <div>
-                <h1 className='font-semibold text-2xl'>Growth & interests</h1>
+                <div className='flex flex-col'>
+                    <h1 className='text-gray-900 font-semibold text-2xl'>Growth & interest</h1>
+                </div>
             </div>
-            <div className='flex justify-around'>
+            <div className='flex justify-around mt-10'>
                 <div>
                     <LineCharts />
                 </div>
