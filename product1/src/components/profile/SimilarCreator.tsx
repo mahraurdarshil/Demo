@@ -29,7 +29,7 @@ const CreatorCard = ({ name, followers, image, verified }: {
 const SimilarCreator = () => {
   return (
     <div className="p-6">
-      <h3 className="font-semibold text-gray-800 mb-4">Creators with similar audience</h3>
+      <h3 className="font-bold text-gray-800 text-lg mb-4">Creators with similar audience</h3>
       <div className="flex flex-wrap gap-8">
         {creators.map((creator, index) => (
           <CreatorCard key={index} {...creator} />
