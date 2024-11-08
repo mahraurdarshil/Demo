@@ -1,22 +1,38 @@
 "use client";
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "@/components/profile/navbar";
 import { RiCake2Line } from "react-icons/ri";
 import { IoLanguage } from "react-icons/io5";
 import { RiPlayListAddLine } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
 import ProfilePostCard from "@/components/profile/TopContent";
-import { userData } from "@/data/data";
 import CommentAnalysis from "@/components/profile/CommentAnalysis";
+import { getUserData } from "@/helpers/backendConnect";
+import { User } from "@/types/user";
+import Loading from "@/components/Loading";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [user, setUser] = useState<User>();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getUserData(1);
+      setUser(data);
+    }
+
+    fetchData();
+  }, []);
+
+  if (!user) {
+    return <Loading />
+  }
 
   return (
     <div className="flex-1 p-4 sm:p-6 lg:p-0">
@@ -34,21 +50,21 @@ const Dashboard = () => {
             <div className="flex w-full lg:w-2/3 flex-col lg:flex-row items-center lg:items-start">
               <Image
                 className="rounded-full"
-                src={userData.profileImage}
+                src={user?.profileImage || "/images/profile.jpg"}
                 alt="Profile"
                 width={200}
                 height={200}
               />
               <div className="ml-0 lg:ml-4 mt-4 lg:mt-0 space-y-4 text-center lg:text-left">
                 <div className="text-lg sm:text-3xl font-bold">
-                  {userData.name}
+                  {user?.name}
                 </div>
                 <div className="text-gray-900 flex items-center justify-center lg:justify-start space-x-2">
-                  <span>{userData.username}</span>
+                  <span>{user?.username}</span>
                   <FaInstagram color="red" />
                 </div>
                 <div className="text-gray-500 w-full sm:w-5/6">
-                  {userData.bio}
+                  {user?.bio}
                 </div>
               </div>
             </div>
@@ -97,7 +113,7 @@ const Dashboard = () => {
               </div>
               <div className="flex flex-col items-center sm:items-start">
                 <span>Creator's age</span>
-                <span className="text-lg font-semibold">{userData.age}</span>
+                <span className="text-lg font-semibold">{user.age}</span>
               </div>
             </div>
             <div className="flex items-center space-x-2 text-gray-600 w-full sm:w-auto">
@@ -110,18 +126,18 @@ const Dashboard = () => {
               <div className="flex flex-col items-center sm:items-start">
                 <span>Language spoken</span>
                 <span className="text-lg font-semibold">
-                  {userData.language}
+                  {user?.language}
                 </span>
               </div>
             </div>
             <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
               <span>Gender</span>
-              <span className="text-lg font-semibold">{userData.gender}</span>
+              <span className="text-lg font-semibold">{user?.gender}</span>
             </div>
             <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
               <span>Account type</span>
               <span className="text-lg font-semibold">
-                {userData.accountType}
+                {user?.accountType}
               </span>
             </div>
           </div>
@@ -130,15 +146,15 @@ const Dashboard = () => {
         <div className="overflow-x-auto mt-5">
           <div className="font-bold text-xl mb-2 ml-5">Top post</div>
           <div className="flex space-x-4 px-4">
-            {userData.topPosts.map((post, index) => (
+            {user?.topPosts.map((post, index) => (
               <div className="flex-shrink-0 w-1/3" key={index}>
-                <ProfilePostCard post={post}/>
+                <ProfilePostCard post={post} />
               </div>
             ))}
           </div>
         </div>
 
-        <CommentAnalysis data={userData}/>
+        <CommentAnalysis data={user} />
 
         <div className="h-32 w-32"></div>
       </div>
