@@ -8,11 +8,11 @@ const Audience = () => {
       <div>
         <h1 className='text-gray-900 font-semibold text-2xl'>Audience</h1>
       </div>
-      <div className='flex justify-around mt-10'>
-        <div>
+      <div className='flex flex-row mt-10'>
+        <div className='w-1/2'>
           <PieCharts />
         </div>
-        <div>
+        <div className='w-1/2'>
           <BarCharts />
         </div>
       </div>
