@@ -17,14 +17,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-]
+import { growthAndInterestTypes, growthAndInterestTypesValue, User } from "@/types/user"
+import { use, useEffect, useState } from "react"
 
 const chartConfig = {
   desktop: {
@@ -33,12 +27,33 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function LineCharts() {
+export function LineCharts({ data }: {
+  data: growthAndInterestTypes
+}) {
+  const [chartData, setChartData] = useState<Array<{
+    month: string
+    desktop: number
+  }>>([
+    { month: "", desktop: 0 },
+    { month: "", desktop: 0 },
+    { month: "", desktop: 0 },
+  ])
+
+  useEffect(() => {
+    setChartData(data.value.map((item) => {
+      return {
+        month: item.type,
+        desktop: item.value
+      }
+    }))
+  }, [])
+
+  console.log(chartData)
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Line Chart - Linear</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{data.heading}</CardTitle>
+        <CardDescription>{data.subHeading}</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -72,14 +87,6 @@ export function LineCharts() {
           </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
   )
 }

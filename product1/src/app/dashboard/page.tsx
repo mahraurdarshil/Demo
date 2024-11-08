@@ -170,7 +170,7 @@ const Dashboard = () => {
             <UpgradeBanner />
           </div>
           <hr className="w-full border-1 " />
-          <GrowthAndIntrest />
+          <GrowthAndIntrest data={user}/>
           <hr className="w-full border-1" />
           <Frequently />
           <hr className="w-full border-1" />

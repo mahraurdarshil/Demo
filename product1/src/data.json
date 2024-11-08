@@ -193,6 +193,122 @@
           ]
         }
       ]
+    },
+    "growthAndInterest": {
+      "id": 1,
+      "heading": "Growth and Interest",
+      "subHeading": "Growth and interest of followers over time.",
+      "type": [
+        {
+          "id": 1,
+          "heading": "Followers growth",
+          "subHeading": "Monthly trend of total followers",
+          "value": [
+            {
+              "id": 1,
+              "type": "Jan 2024",
+              "value": 20.28
+            },
+            {
+              "id": 2,
+              "type": "Feb 2024",
+              "value": 30.13
+            },
+            {
+              "id": 3,
+              "type": "Mar 2024",
+              "value": 12.98
+            },
+            {
+              "id": 4,
+              "type": "Apr 2024",
+              "value": 39.98
+            },
+            {
+              "id": 5,
+              "type": "May 2024",
+              "value": 29.01
+            },
+            {
+              "id": 6,
+              "type": "Jun 2024",
+              "value": 20.56
+            },
+            {
+              "id": 7,
+              "type": "Jul 2024",
+              "value": 51.89
+            },
+            {
+              "id": 8,
+              "type": "Aug 2024",
+              "value": 20.28
+            },
+            {
+              "id": 9,
+              "type": "Sep 2024",
+              "value": 25.89
+            },
+            {
+              "id": 10,
+              "type": "Oct 2024",
+              "value": 12.67
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "heading": "Likes growth",
+          "subHeading": "Monthly trend of average likes per post",
+          "value": [
+            {
+              "id": 1,
+              "type": "Jan 2024",
+              "value": 5.28
+            },
+            {
+              "id": 2,
+              "type": "Feb 2024",
+              "value": 10.13
+            },
+            {
+              "id": 3,
+              "type": "Mar 2024",
+              "value": 20.98
+            },
+            {
+              "id": 4,
+              "type": "Apr 2024",
+              "value": 34.98
+            },
+            {
+              "id": 5,
+              "type": "May 2024",
+              "value": 31.01
+            },
+            {
+              "id": 6,
+              "type": "Jun 2024",
+              "value": 45.56
+            },
+            {
+              "id": 7,
+              "type": "Jul 2024",
+              "value": 61.89
+            },
+            {
+              "id": 8,
+              "type": "Aug 2024",
+              "value": 30.28
+            },
+            {
+              "id": 9,
+              "type": "Sep 2024",
+              "value": 35.89
+            }
+          ]
+        }
+      ]
     }
   }
 ]

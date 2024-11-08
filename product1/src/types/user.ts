@@ -33,6 +33,25 @@ export type User = {
     subHeading: string;
     type: audienceDemographicsTypes[];
   };
+  growthAndInterest:{
+    id : number;
+    heading: string;
+    subHeading: string;
+    type: growthAndInterestTypes[];
+  }
+};
+
+export type growthAndInterestTypes = {
+  id: number;
+  heading: string;
+  subHeading: string;
+  value: growthAndInterestTypesValue[];
+};
+
+export type growthAndInterestTypesValue = {
+  id?: number;
+  type: string;
+  value: number;
 };
 
 export type audienceDemographicsTypes = {

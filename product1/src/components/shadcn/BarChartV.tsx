@@ -68,7 +68,6 @@ export function BarChartV({ data }: {
     }
   }, [type])
 
-  console.log("C data ", chartData)
   return (
     <Card>
       <CardHeader>
