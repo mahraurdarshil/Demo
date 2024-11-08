@@ -12,6 +12,13 @@ import CommentAnalysis from "@/components/profile/CommentAnalysis";
 import { getUserData } from "@/helpers/backendConnect";
 import { User } from "@/types/user";
 import Loading from "@/components/Loading";
+import GrowthAndIntrest from "@/components/profile/GrowthAndIntrest";
+import Frequently from "@/components/profile/Frequently";
+import Audience from "@/components/profile/Audience";
+import AudienceDemographics from "@/components/profile/AudienceDemographics";
+import AudienceInterests from "@/components/profile/AudienceInterests";
+import FollowerTypes from "@/components/profile/FollowerTypes";
+import SimilarCreator from "@/components/profile/SimilarCreator";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -153,9 +160,23 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-
+        <hr className="w-full border-1 mt-4" />
         <CommentAnalysis data={user} />
-
+        <hr className="w-full border-1 mt-4" />
+        <GrowthAndIntrest />
+        <hr className="w-full border-1 mt-4" />
+        <Frequently />
+        <hr className="w-full border-1 mt-4" />
+        <Audience />
+        <hr className="w-full border-1 mt-4" />
+        <AudienceDemographics />
+        <hr className="w-full border-1 mt-4" />
+        <AudienceInterests />
+        <hr className="w-full border-1 mt-4" />
+        <FollowerTypes />
+        <hr className="w-full border-1 mt-4" />
+        <SimilarCreator />
+        <hr className="w-full border-1 mt-4" />
         <div className="h-32 w-32"></div>
       </div>
     </div>
