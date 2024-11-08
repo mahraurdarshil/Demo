@@ -17,13 +17,5 @@ export const userData = {
       comments: "524",
       time: "12:30 PM, Oct 24, 2024",
     },
-    {
-      id: 2,
-      imageUrl: "/profile/p2.jpg",
-      caption: "Another memorable moment captured! #memories",
-      likes: "8.1k",
-      comments: "300",
-      time: "12 AM, Oct 12, 2023",
-    },
   ],
 };

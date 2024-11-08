@@ -9,6 +9,7 @@ import { RiPlayListAddLine } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
 import ProfilePostCard from "@/components/profile/TopContent";
 import { userData } from "@/data/data";
+import CommentAnalysis from "@/components/profile/CommentAnalysis";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -136,6 +137,8 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
+
+        <CommentAnalysis />
 
         <div className="h-32 w-32"></div>
       </div>
