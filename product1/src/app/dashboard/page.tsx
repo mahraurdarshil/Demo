@@ -19,6 +19,7 @@ import AudienceDemographics from "@/components/profile/AudienceDemographics";
 import AudienceInterests from "@/components/profile/AudienceInterests";
 import FollowerTypes from "@/components/profile/FollowerTypes";
 import SimilarCreator from "@/components/profile/SimilarCreator";
+import UpgradeBanner from "@/components/profile/Updates";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -164,6 +165,10 @@ const Dashboard = () => {
 
           <hr className="w-full border-1" />
           <CommentAnalysis data={user} />
+          <hr className="w-full border-1 " />
+          <div className="p-10">
+            <UpgradeBanner />
+          </div>
           <hr className="w-full border-1 " />
           <GrowthAndIntrest />
           <hr className="w-full border-1" />
