@@ -150,8 +150,8 @@ const Dashboard = () => {
           </div>
         </div>
         <Navbar />
-        <div className="overflow-x-auto mt-5">
-          <div className="font-bold text-xl mb-2 ml-5">Top post</div>
+        <div className="overflow-x-auto mt-5 mb-5">
+          <div className="text-gray-900 font-semibold text-2xl mb-2 ml-5">Top post</div>
           <div className="flex space-x-4 px-4">
             {user?.topPosts.map((post, index) => (
               <div className="flex-shrink-0 w-1/3" key={index}>
