@@ -160,23 +160,22 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-        <hr className="w-full border-1 mt-4" />
-        <CommentAnalysis data={user} />
-        <hr className="w-full border-1 mt-4" />
-        <GrowthAndIntrest />
-        <hr className="w-full border-1 mt-4" />
-        <Frequently />
-        <hr className="w-full border-1 mt-4" />
-        <Audience />
-        <hr className="w-full border-1 mt-4" />
-        <AudienceDemographics />
-        <hr className="w-full border-1 mt-4" />
-        <AudienceInterests />
-        <hr className="w-full border-1 mt-4" />
-        <FollowerTypes />
-        <hr className="w-full border-1 mt-4" />
-        <SimilarCreator />
-        <hr className="w-full border-1 mt-4" />
+        <div className="flex flex-col space-y-4">
+
+          <hr className="w-full border-1 mt-4" />
+          <CommentAnalysis data={user} />
+          <hr className="w-full border-1 mt-4" />
+          <GrowthAndIntrest />
+          <hr className="w-full border-1 mt-4" />
+          <Frequently />
+          <hr className="w-full border-1 mt-4" />
+          <Audience />
+          <AudienceDemographics />
+          <AudienceInterests />
+          <FollowerTypes />
+          <SimilarCreator />
+          <hr className="w-full border-1 mt-4" />
+        </div>
         <div className="h-32 w-32"></div>
       </div>
     </div>

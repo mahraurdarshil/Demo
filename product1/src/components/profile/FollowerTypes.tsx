@@ -1,8 +1,9 @@
 import React from 'react'
+import { PieChartText } from '../shadcn/PieChartText'
 
 const FollowerTypes = () => {
   return (
-    <div>FollowerTypes</div>
+    <div><PieChartText /></div>
   )
 }
 

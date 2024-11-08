@@ -1,8 +1,12 @@
 import React from 'react'
+import { BarCharts } from '../shadcn/BarChart'
 
 const AudienceInterests = () => {
   return (
-    <div>AudienceInterests</div>
+    <div className='flex w-full justify-around'>
+      <div><BarCharts /></div>
+      <div><BarCharts /></div>
+    </div>
   )
 }
 
