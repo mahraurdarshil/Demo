@@ -180,7 +180,7 @@ const Dashboard = () => {
           <hr className="w-full border-1" />
           <AudienceInterests />
           <hr className="w-full border-1" />
-          <FollowerTypes />
+          <FollowerTypes data={user}/>
           <hr className="w-full border-1" />
           <SimilarCreator />
           <hr className="w-full border-1" />

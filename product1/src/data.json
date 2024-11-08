@@ -30,6 +30,34 @@
       "heading": "Intent to buy product",
       "subHeading": "Comments in which people have shown intent to buy the product/service.",
       "value": 135
+    },
+    "followersType": {
+      "id": 1,
+      "heading": "Followers Types",
+      "subHeading": "Classification of followers based on their behavior.",
+      "totalFollowers": 10000,
+      "types": [
+        {
+          "id": 1,
+          "type": "real",
+          "value": 60
+        },
+        {
+          "id": 2,
+          "type": "Mass followers",
+          "value": 18
+        },
+        {
+          "id": 3,
+          "type": "Suspicious",
+          "value": 12
+        },
+        {
+          "id": 4,
+          "type": "Influencers",
+          "value": 10
+        }
+      ]
     }
   }
 ]

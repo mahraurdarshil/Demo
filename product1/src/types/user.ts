@@ -20,6 +20,19 @@ export type User = {
     subHeading: string;
     value: number;
   };
+  followersType: {
+    id: number;
+    heading: string;
+    subHeading: string;
+    totalFollowers: number;
+    types: types[];
+  };
+};
+
+export type types = {
+  id: number;
+  type: string;
+  value: number;
 };
 
 export type CommentAnalysis = {
