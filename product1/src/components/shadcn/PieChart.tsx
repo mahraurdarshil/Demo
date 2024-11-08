@@ -22,21 +22,20 @@ const chartData = [
   { browser: "safari", visitors: 200, fill: "var(--color-safari)" }
 ]
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  }
-} satisfies ChartConfig
-
 export function PieCharts() {
+  const chartConfig = {
+    visitors: {
+      label: "Visitors",
+    },
+    chrome: {
+      label: "Chrome",
+      color: "hsl(var(--chart-1))",
+    },
+    safari: {
+      label: "Safari",
+      color: "hsl(var(--chart-2))",
+    }
+  } satisfies ChartConfig
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">

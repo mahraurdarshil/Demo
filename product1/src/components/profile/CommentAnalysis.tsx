@@ -2,6 +2,7 @@ import React from 'react'
 import { Badge } from "@/components/ui/badge"
 import { Chart } from '../shadcn/RadialChart'
 import { User } from '@/types/user'
+import { PieCharts } from '../shadcn/PieChart'
 
 const CommentAnalysis = ({ data }: {
     data: User
@@ -16,9 +17,9 @@ const CommentAnalysis = ({ data }: {
                 <div><Badge variant="outline">Learn how we calculate this with AI</Badge>
                 </div>
             </div>
-            <div className='flex justify-evenly mt-10'>
+            <div className='flex justify-around mt-10'>
                 <div><Chart data={data.intentToBuyProduct}/></div>
-                <div><Chart data={data.AudienceSentiment}/></div>
+                <div><PieCharts/></div>
             </div>
         </div>
     )

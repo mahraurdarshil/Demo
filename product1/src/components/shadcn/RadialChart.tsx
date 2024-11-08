@@ -47,8 +47,8 @@ export function Chart({ data }: { data: CommentAnalysis }) {
                 >
                     <RadialBarChart
                         data={chartData}
-                        startAngle={0}
-                        endAngle={250}
+                        startAngle={270}
+                        endAngle={270 - data.value}
                         innerRadius={80}
                         outerRadius={110}
                     >
