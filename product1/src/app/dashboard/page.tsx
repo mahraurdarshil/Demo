@@ -178,7 +178,7 @@ const Dashboard = () => {
           <hr className="w-full border-1" />
           <AudienceDemographics data={user} />
           <hr className="w-full border-1" />
-          <AudienceInterests />
+          <AudienceInterests data={user}/>
           <hr className="w-full border-1" />
           <FollowerTypes data={user}/>
           <hr className="w-full border-1" />

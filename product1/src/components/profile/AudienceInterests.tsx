@@ -1,11 +1,19 @@
 import React from 'react'
 import { BarCharts } from '../shadcn/BarChart'
+import { User } from '@/types/user'
 
-const AudienceInterests = () => {
+const AudienceInterests = ({ data }: {
+  data: User
+}) => {
   return (
     <div className='flex flex-row mt-10'>
-      <div className='w-1/2'><BarCharts /></div>
-      <div className='w-1/2'><BarCharts /></div>
+      {data.audienceInterests.types.map((item) => {
+        return (
+          <div className='w-1/2'>
+            <BarCharts data={item} />
+          </div>
+        )
+      })}
     </div>
   )
 }

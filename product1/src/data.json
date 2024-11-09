@@ -309,6 +309,125 @@
           ]
         }
       ]
+    },
+    "audienceInterests": {
+      "id": 1,
+      "types": [
+        {
+          "id": 1,
+          "heading": "Audience brand affinity",
+          "subHeading": "Brands followed by the audience",
+          "value": [
+            {
+              "id": 1,
+              "type": "Mazda",
+              "value": 12
+            },
+            {
+              "id": 2,
+              "type": "Nike",
+              "value": 2
+            },
+            {
+              "id": 3,
+              "type": "Walt Disney",
+              "value": 5
+            },
+            {
+              "id": 4,
+              "type": "Apple",
+              "value": 6
+            },
+            {
+              "id": 5,
+              "type": "Amazon",
+              "value": 16
+            },
+            {
+              "id": 6,
+              "type": "Google",
+              "value": 12
+            },
+            {
+              "id": 7,
+              "type": "Microsoft",
+              "value": 6
+            },
+            {
+              "id": 8,
+              "type": "Coca Cola",
+              "value": 8
+            },
+            {
+              "id": 9,
+              "type": "Samsung",
+              "value": 9
+            },
+            {
+              "id": 10,
+              "type": "Sony",
+              "value": 12
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "heading": "Audience interests",
+          "subHeading": "Interests and topics that the audience posts about",
+          "value": [
+            {
+              "id": 1,
+              "type": "Music",
+              "value": 10
+            },
+            {
+              "id": 2,
+              "type": "Movies",
+              "value": 9
+            },
+            {
+              "id": 3,
+              "type": "Sports",
+              "value": 1
+            },
+            {
+              "id": 4,
+              "type": "Fashion",
+              "value": 4
+            },
+            {
+              "id": 5,
+              "type": "Travel",
+              "value": 2
+            },
+            {
+              "id": 6,
+              "type": "Food",
+              "value": 1
+            },
+            {
+              "id": 7,
+              "type": "Technology",
+              "value": 12
+            },
+            {
+              "id": 8,
+              "type": "Automobile",
+              "value": 0
+            },
+            {
+              "id": 9,
+              "type": "Health",
+              "value": 1
+            },
+            {
+              "id": 10,
+              "type": "Fitness",
+              "value": 5
+            }
+          ]
+        }
+      ]
     }
   }
 ]
