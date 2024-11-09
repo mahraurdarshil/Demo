@@ -491,6 +491,36 @@
           ]
         }
       ]
+    },
+    "audienceSentiment":{
+      "id": 1,
+      "types":[
+        {
+          "id": 1,
+          "heading": "Audience sentiment",
+          "subHeading": "Comments classified on the basis of the opinions and emotions behind them.",
+          "value": [
+            {
+              "id": 1,
+              "type": "Positive",
+              "value": 20,
+              "fill": "var(--color-chrome)"
+            },
+            {
+              "id": 2,
+              "type": "Neutral",
+              "value": 10,
+              "fill": "var(--color-visitors)" 
+            },
+            {
+              "id": 3,
+              "type": "Negative",
+              "value": 12,
+              "fill": "var(--color-safari)"
+            }
+          ]
+        }
+      ]
     }
   }
 ]

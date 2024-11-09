@@ -18,8 +18,8 @@ const CommentAnalysis = ({ data }: {
                 </div>
             </div>
             <div className='flex mt-10'>
-                <div className='w-1/2'><Chart data={data.intentToBuyProduct}/></div>
-                <div className='w-1/2'><PieCharts/></div>
+                <div className='w-1/2'><Chart data={data.intentToBuyProduct} /></div>
+                <div className='w-1/2'><PieCharts data={data.audienceSentiment.types[0]} /></div>
             </div>
         </div>
     )

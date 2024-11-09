@@ -17,30 +17,46 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" }
-]
+import { User } from "@/types/user"
+import { useEffect, useState } from "react"
 
-export function PieCharts() {
+export function PieCharts({ data }: {
+  data: User['audienceSentiment']['types'][0]
+}) {
+  const [chartData, setChartData] = useState<Array<{
+    browser: string;
+    visitors: number;
+    fill: string;
+  }> | []>([])
   const chartConfig = {
     visitors: {
-      label: "Visitors",
+      label: "Neutral",
+      color: "#808080",
     },
     chrome: {
-      label: "Chrome",
-      color: "hsl(var(--chart-1))",
+      label: "Positive",
+      color: "#00FF00",
     },
     safari: {
-      label: "Safari",
-      color: "hsl(var(--chart-2))",
-    }
+      label: "Negative",
+      color: "#FF0000",
+    },
   } satisfies ChartConfig
+
+  useEffect(() => {
+    if (data?.value) {
+        setChartData(data.value.map((item) => ({
+        browser: item.type,
+        visitors: item.value,
+        fill: item.fill,
+      })))
+    }
+  }, [])
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Donut</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{data?.heading}</CardTitle>
+        <CardDescription>{data?.subHeading}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -61,14 +77,6 @@ export function PieCharts() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
   )
 }

@@ -39,6 +39,7 @@ export function Chart({ data }: { data: CommentAnalysis }) {
         <Card className="flex flex-col">
             <CardHeader className="items-center pb-0">
                 <CardTitle>{data.heading}</CardTitle>
+                <CardDescription>{data.subHeading}</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 pb-0">
                 <ChartContainer
@@ -94,12 +95,6 @@ export function Chart({ data }: { data: CommentAnalysis }) {
                     </RadialBarChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col gap-2 text-sm">
-                <div className="flex items-center gap-2 w-60 font-medium leading-none">
-                    {data.subHeading}
-                </div>
-               
-            </CardFooter>
         </Card>
     )
 }

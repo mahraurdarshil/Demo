@@ -46,7 +46,25 @@ export type User = {
   audienceLocation:{
     id: number;
     types: barChartTypes[];
+  };
+  audienceSentiment:{
+    id: number;
+    types: pieChartTypes[];
   }
+};
+
+export type pieChartTypes = {
+  id?: number;
+  heading: string;
+  subHeading: string;
+  value: pieChartTypesValue[];
+};
+
+export type pieChartTypesValue = {
+  id?: number;
+  type: string;
+  value: number;
+  fill: string;
 };
 
 export type barChartTypes = {
