@@ -50,6 +50,10 @@ export type User = {
   audienceSentiment:{
     id: number;
     types: pieChartTypes[];
+  };
+  genderDistribution:{
+    id: number;
+    types: pieChartTypes[];
   }
 };
 

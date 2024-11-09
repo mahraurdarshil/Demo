@@ -13,7 +13,7 @@ const Audience = ({ data }: {
       </div>
       <div className='flex flex-row mt-10'>
         <div className='w-1/2'>
-          <PieCharts />
+          <PieCharts data={data.genderDistribution.types[0]}/>
         </div>
         <div className='w-1/2'>
           {data.audienceLocation.types.map((item) => {

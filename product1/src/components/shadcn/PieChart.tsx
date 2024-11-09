@@ -31,17 +31,30 @@ export function PieCharts({ data }: {
   const chartConfig = {
     visitors: {
       label: "Neutral",
-      color: "#808080",
+      color: "#808080", // Neutral gray color
     },
     chrome: {
       label: "Positive",
-      color: "#00FF00",
+      color: "#00FF00", // Green color
     },
     safari: {
       label: "Negative",
-      color: "#FF0000",
+      color: "#FF0000", // Red color
+    },
+    male: {
+      label: "Male",
+      color: "#1E90FF", // Blue color for male
+    },
+    female: {
+      label: "Female",
+      color: "#FF69B4", // Pink color for female
+    },
+    others: {
+      label: "Others",
+      color: "#FFD700", // Gold color for others
     },
   } satisfies ChartConfig
+  
 
   useEffect(() => {
     if (data?.value) {
@@ -56,7 +69,7 @@ export function PieCharts({ data }: {
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
         <CardTitle>{data?.heading}</CardTitle>
-        <CardDescription>{data?.subHeading}</CardDescription>
+        <CardDescription className="text-center">{data?.subHeading}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
