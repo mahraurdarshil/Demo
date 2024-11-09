@@ -17,9 +17,9 @@ const CommentAnalysis = ({ data }: {
                 <div><Badge variant="outline">Learn how we calculate this with AI</Badge>
                 </div>
             </div>
-            <div className='flex justify-around mt-10'>
-                <div><Chart data={data.intentToBuyProduct}/></div>
-                <div><PieCharts/></div>
+            <div className='flex mt-10'>
+                <div className='w-1/2'><Chart data={data.intentToBuyProduct}/></div>
+                <div className='w-1/2'><PieCharts/></div>
             </div>
         </div>
     )

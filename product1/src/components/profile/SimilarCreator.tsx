@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdVerified } from "react-icons/md";
 
 const creators = [
   { name: "cleo_ohsojazzy", followers: "1.82M", image: "/similar/p1.webp", verified: true },
@@ -19,7 +20,7 @@ const CreatorCard = ({ name, followers, image, verified }: {
     <div>
       <div className="flex items-center space-x-1">
         <span className="font-semibold text-gray-800">{name}</span>
-        {verified && <span className="text-blue-500">✔️</span>}
+        {verified && <span className="text-blue-500"><MdVerified size={20}/></span>}
       </div>
       <p className="text-gray-500 text-sm">{followers} followers</p>
     </div>

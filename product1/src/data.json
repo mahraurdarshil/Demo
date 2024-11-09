@@ -122,12 +122,12 @@
             {
               "id": 3,
               "type": "French",
-              "value": 10
+              "value": 12
             },
             {
               "id": 4,
               "type": "German",
-              "value": 5
+              "value": 21
             },
             {
               "id": 5,
@@ -137,27 +137,27 @@
             {
               "id": 6,
               "type": "Russian",
-              "value": 5
+              "value": 13
             },
             {
               "id": 7,
               "type": "Chinese",
-              "value": 5
+              "value": 9
             },
             {
               "id": 8,
               "type": "Japanese",
-              "value": 5
+              "value": 17
             },
             {
               "id": 9,
               "type": "Korean",
-              "value": 5
+              "value": 19
             },
             {
               "id": 10,
               "type": "Arabic",
-              "value": 5
+              "value": 11
             }
           ]
         },
