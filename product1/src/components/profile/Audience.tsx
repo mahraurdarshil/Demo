@@ -1,8 +1,11 @@
 import React from 'react'
 import { PieCharts } from '../shadcn/PieChart'
 import { BarCharts } from '../shadcn/BarChart'
+import { User } from '@/types/user'
 
-const Audience = () => {
+const Audience = ({ data }: {
+  data: User
+}) => {
   return (
     <div className='flex flex-col w-full p-10'>
       <div>
@@ -13,7 +16,11 @@ const Audience = () => {
           <PieCharts />
         </div>
         <div className='w-1/2'>
-          <BarCharts />
+          {data.audienceLocation.types.map((item) => {
+            return (
+              <BarCharts data={item} />
+            )
+          })}
         </div>
       </div>
     </div>

@@ -428,6 +428,69 @@
           ]
         }
       ]
+    },
+
+    "audienceLocation":{
+      "id": 1,
+      "types":[
+        {
+          "id": 1,
+          "heading": "Audience location",
+          "subHeading": "Location of the audience",
+          "value": [
+            {
+              "id": 1,
+              "type": "United States",
+              "value": 20
+            },
+            {
+              "id": 2,
+              "type": "United Kingdom",
+              "value": 10
+            },
+            {
+              "id": 3,
+              "type": "Canada",
+              "value": 12
+            },
+            {
+              "id": 4,
+              "type": "Australia",
+              "value": 21
+            },
+            {
+              "id": 5,
+              "type": "Germany",
+              "value": 5
+            },
+            {
+              "id": 6,
+              "type": "France",
+              "value": 13
+            },
+            {
+              "id": 7,
+              "type": "Italy",
+              "value": 9
+            },
+            {
+              "id": 8,
+              "type": "Russia",
+              "value": 17
+            },
+            {
+              "id": 9,
+              "type": "China",
+              "value": 19
+            },
+            {
+              "id": 10,
+              "type": "Japan",
+              "value": 11
+            }
+          ]
+        }
+      ]
     }
   }
 ]

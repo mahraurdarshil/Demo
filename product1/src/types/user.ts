@@ -42,6 +42,10 @@ export type User = {
   audienceInterests:{
     id: number;
     types: audienceInterestsTypes[];
+  };
+  audienceLocation:{
+    id: number;
+    types: audienceInterestsTypes[];
   }
 };
 
