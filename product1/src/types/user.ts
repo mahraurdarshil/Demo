@@ -41,22 +41,22 @@ export type User = {
   };
   audienceInterests:{
     id: number;
-    types: audienceInterestsTypes[];
+    types: barChartTypes[];
   };
   audienceLocation:{
     id: number;
-    types: audienceInterestsTypes[];
+    types: barChartTypes[];
   }
 };
 
-export type audienceInterestsTypes = {
+export type barChartTypes = {
   id?: number;
   heading: string;
   subHeading: string;
-  value: audienceInterestsTypesValue[];
+  value: barChartTypesValue[];
 };
 
-export type audienceInterestsTypesValue = {
+export type barChartTypesValue = {
   id?: number;
   type: string;
   value: number;
