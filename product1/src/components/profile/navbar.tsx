@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
+    const [isSticky, setSticky] = useState(false);
+
+    const handleScroll = () => {
+        setSticky(window.scrollY > 0);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="flex flex-wrap justify-center lg:justify-evenly p-4 lg:p-6 border-t-2 border-b-2">
+        <div className={`sticky top-0 z-10 flex flex-wrap justify-center bg-slate-50 lg:justify-evenly p-4 lg:p-6 border-t-2 border-b-2 ${isSticky ? 'bg-black' : ''}`}>
             <span className="hidden lg:inline-block"></span>
             <span className="hidden lg:inline-block"></span>
 
