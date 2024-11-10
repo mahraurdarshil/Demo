@@ -6,10 +6,10 @@ const AudienceInterests = ({ data }: {
   data: User
 }) => {
   return (
-    <div className='flex flex-row mt-10'>
+    <div className='flex flex-col md:flex-row mt-10 md:p-10'>
       {data.audienceInterests.types.map((item) => {
         return (
-          <div className='w-1/2'>
+          <div className='w-full md:w-1/2'>
             <BarCharts data={item} />
           </div>
         )

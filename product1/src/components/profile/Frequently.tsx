@@ -7,8 +7,8 @@ const Frequently = () => {
     "@xxxtentacion", "@quintron", "@jmp", "@sabaahfolayan"
   ];
   return (
-    <div className="flex w-full flex-col sm:flex-row gap-8 p-10 bg-white">
-      <div className="flex w-1/2 flex-col space-y-4 items-start">
+    <div className="flex w-full flex-col sm:flex-row gap-8 md:p-10 bg-white">
+      <div className="flex w-full md:w-1/2 flex-col space-y-4 items-start">
         <div className="flex items-center space-x-2 mb-2">
           <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-lg">
             #
@@ -29,7 +29,7 @@ const Frequently = () => {
         </div>
       </div>
 
-      <div className="flex w-1/2 flex-col space-y-4 items-start">
+      <div className="flex w-full md:w-1/2 flex-col space-y-4 items-start">
         <div className="flex items-center space-x-2 mb-2">
           <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-lg">
             @

@@ -6,7 +6,7 @@ const AudienceDemographics = ({ data }: {
   data: User
 }) => {
   return (
-    <div className='flex flex-col w-full'>
+    <div className='flex flex-col w-full md:p-10'>
       <BarChartV data={data}/>
     </div>
   )

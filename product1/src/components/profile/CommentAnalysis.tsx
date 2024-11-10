@@ -8,7 +8,7 @@ const CommentAnalysis = ({ data }: {
     data: User
 }) => {
     return (
-        <div className='flex flex-col w-full p-10'>
+        <div className='flex flex-col w-full md:p-10'>
             <div className='flex justify-between'>
                 <div className='flex flex-col'>
                     <h1 className='text-gray-900 font-semibold text-2xl'>Comments analysis</h1>
@@ -17,9 +17,9 @@ const CommentAnalysis = ({ data }: {
                 <div><Badge variant="outline">Learn how we calculate this with AI</Badge>
                 </div>
             </div>
-            <div className='flex mt-10'>
-                <div className='w-1/2'><Chart data={data.intentToBuyProduct} /></div>
-                <div className='w-1/2'><PieCharts data={data.audienceSentiment.types[0]} /></div>
+            <div className='flex md:flex-row flex-col w-full mt-10'>
+                <div className='w-full md:w-1/2'><Chart data={data.intentToBuyProduct} /></div>
+                <div className='w-full md:w-1/2'><PieCharts data={data.audienceSentiment.types[0]} /></div>
             </div>
         </div>
     )

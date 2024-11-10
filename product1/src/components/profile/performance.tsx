@@ -4,7 +4,7 @@ const Performance = () => {
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4">Performance</h1>
-            <div className="w-full grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            <div className="w-full grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                 <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg">
                     <span className="text-xl font-semibold">80</span>
                     <span className="text-gray-600">Followers</span>

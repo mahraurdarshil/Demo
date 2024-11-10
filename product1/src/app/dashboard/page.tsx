@@ -20,6 +20,7 @@ import AudienceInterests from "@/components/profile/AudienceInterests";
 import FollowerTypes from "@/components/profile/FollowerTypes";
 import SimilarCreator from "@/components/profile/SimilarCreator";
 import UpgradeBanner from "@/components/profile/Updates";
+import Performance from "@/components/profile/Performance";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -112,30 +113,35 @@ const Dashboard = () => {
 
           {/* Additional Info */}
           <div className="flex flex-wrap mt-6 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-12">
-            <div className="flex items-center space-x-2 text-gray-600 w-full sm:w-auto">
-              <div>
-                <RiCake2Line
-                  size={50}
-                  className="bg-slate-50 rounded-full p-2"
-                />
-              </div>
-              <div className="flex flex-col items-center sm:items-start">
-                <span>Creator's age</span>
-                <span className="text-lg font-semibold">{user.age}</span>
+            <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
+              <div className="flex">
+                <div>
+                  <RiCake2Line
+                    size={50}
+                    className="bg-slate-50 rounded-full p-2 hidden sm:block"
+                  />
+                </div>
+                <div className="flex flex-col items-center sm:items-start">
+                  <span>Creator's age</span>
+                  <span className="text-lg font-semibold">{user.age}</span>
+                </div>
               </div>
             </div>
-            <div className="flex items-center space-x-2 text-gray-600 w-full sm:w-auto">
-              <div>
-                <IoLanguage
-                  size={50}
-                  className="bg-slate-50 rounded-full p-2"
-                />
-              </div>
-              <div className="flex flex-col items-center sm:items-start">
-                <span>Language spoken</span>
-                <span className="text-lg font-semibold">
-                  {user?.language}
-                </span>
+            <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
+              <div className="flex">
+
+                <div>
+                  <IoLanguage
+                    size={50}
+                    className="bg-slate-50 rounded-full p-2 hidden sm:block"
+                  />
+                </div>
+                <div className="flex flex-col items-center sm:items-start">
+                  <span>Language spoken</span>
+                  <span className="text-lg font-semibold">
+                    {user?.language}
+                  </span>
+                </div>
               </div>
             </div>
             <div className="flex flex-col items-center text-gray-600 w-full sm:w-auto">
@@ -151,11 +157,12 @@ const Dashboard = () => {
           </div>
         </div>
         <Navbar />
+        <Performance />
         <div className="overflow-x-auto mt-5 mb-5">
           <div className="text-gray-900 font-semibold text-2xl mb-2 ml-5">Top post</div>
           <div className="flex space-x-4 px-4">
             {user?.topPosts.map((post, index) => (
-              <div className="flex-shrink-0 w-1/3" key={index}>
+              <div className="flex-shrink-0 w-full md:w-1/3 " key={index}>
                 <ProfilePostCard post={post} />
               </div>
             ))}
@@ -165,22 +172,22 @@ const Dashboard = () => {
 
           <hr className="w-full border-1" />
           <CommentAnalysis data={user} />
-          <hr className="w-full border-1 " />
+          {/* <hr className="w-full border-1 " />
           <div className="p-10">
             <UpgradeBanner />
-          </div>
+          </div> */}
           <hr className="w-full border-1 " />
-          <GrowthAndIntrest data={user}/>
+          <GrowthAndIntrest data={user} />
           <hr className="w-full border-1" />
           <Frequently />
           <hr className="w-full border-1" />
-          <Audience data={user}/>
+          <Audience data={user} />
           <hr className="w-full border-1" />
           <AudienceDemographics data={user} />
           <hr className="w-full border-1" />
-          <AudienceInterests data={user}/>
+          <AudienceInterests data={user} />
           <hr className="w-full border-1" />
-          <FollowerTypes data={user}/>
+          <FollowerTypes data={user} />
           <hr className="w-full border-1" />
           <SimilarCreator />
           <hr className="w-full border-1" />
